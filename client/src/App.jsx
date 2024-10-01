@@ -17,7 +17,7 @@ function App() {
             throw Error('error');
          }
 
-         const { data } = await result.json();
+         const data = await result.json();
 
          setQoute(data.quoteText);
       } catch (error) {

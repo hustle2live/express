@@ -15,7 +15,7 @@ router.get('/get-qoute', async (req, res, next) => {
 
       const { quoteText, quoteAuthor } = result;
 
-      res.status(200).send({ data: { quoteText, quoteAuthor } });
+      res.status(200).send({ quoteText, quoteAuthor });
    } catch (error) {
       res.statusCode = 500;
       res.json({ message: error?.message ?? error });

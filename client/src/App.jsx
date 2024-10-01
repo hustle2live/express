@@ -3,12 +3,16 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
+// const localURL = 'http://localhost:3000/api/get-qoute';
+
+const serverURL = 'https://express-rbm1.onrender.com/api/get-qoute';
+
 function App() {
    const [qoute, setQoute] = useState('Get the inspiration');
 
    const getQoutes = useCallback(async () => {
       try {
-         const result = await fetch('http://localhost:3000/api/get-qoute', {});
+         const result = await fetch(serverURL, {});
          if (!result || !result.ok) {
             throw Error('error');
          }

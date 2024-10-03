@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(
    cors({
-      origin: ['http://localhost:5173', 'https://hustle2live.github.io', 'http://localhost:8081/'],
+      origin: '*',
       methods: ['POST', 'GET', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-type', 'Authorization']
    })
